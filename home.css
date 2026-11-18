@@ -1,0 +1,592 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #FFFBEF;
+    color: #1E2A4A;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo, .footer-logo {
+    font-family: 'Fredoka', sans-serif;
+    line-height: 1.15;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navbar */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 16px 5%;
+    background: #FFFBEF;
+    border-bottom: 3px solid #1E2A4A;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    font-size: 25px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #2F6FDE;
+}
+
+.nav-links {
+    float: left;
+    margin: 8px 0 0 35px;
+}
+
+.nav-links a {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: 800;
+    transition: color 0.15s, transform 0.15s;
+}
+
+.nav-links a:hover {
+    color: #2F6FDE;
+    transform: translateY(-2px);
+}
+
+.nav-button {
+    float: right;
+    padding: 10px 18px;
+    color: white;
+    background: #2F6FDE;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 #1E2A4A;
+    font-weight: 800;
+}
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    max-width: 1150px;
+    margin: auto;
+    padding: 85px 24px 100px;
+    overflow: hidden;
+}
+
+.hero-content {
+    float: left;
+    width: 54%;
+}
+
+.badge {
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 8px 15px;
+    background: #5FD3A8;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 999px;
+    font-weight: 800;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 64px;
+    letter-spacing: -1px;
+}
+
+.hero h1 span {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 8px;
+    background: #FFD43B;
+    transform: rotate(-1deg);
+}
+
+.hero-description {
+    max-width: 500px;
+    margin: 24px 0;
+    color: #6B7794;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    overflow: hidden;
+}
+
+.start-button, .browse-button {
+    display: inline-block;
+    margin: 0 12px 10px 0;
+    padding: 13px 21px;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #1E2A4A;
+    font-weight: 800;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.start-button {
+    background: #FF7A59;
+}
+
+.browse-button {
+    background: #FFFFFF;
+}
+
+.start-button:hover, .browse-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #1E2A4A;
+}
+
+.hero-note {
+    margin-top: 26px;
+    color: #6B7794;
+    font-weight: 800;
+}
+
+/* Quiz Card */
+
+.quiz-area {
+    position: relative;
+    float: right;
+    width: 42%;
+    padding: 25px 10px;
+}
+
+.quiz-card {
+    position: relative;
+    z-index: 1;
+    padding: 25px;
+    background: #FFFFFF;
+    border: 3px solid #1E2A4A;
+    border-radius: 18px;
+    box-shadow: 8px 8px 0 #1E2A4A;
+    transform: rotate(1.5deg);
+}
+
+.quiz-top {
+    overflow: hidden;
+    color: #6B7794;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.quiz-top > :first-child {
+    float: left;
+}
+
+.quiz-top > :last-child {
+    float: right;
+}
+
+.quiz-card h2 {
+    margin: 25px 0;
+    font-size: 27px;
+}
+
+.answer-option {
+    margin-top: 12px;
+    padding: 11px 14px;
+    background: #FFFFFF;
+    border: 2px solid #1E2A4A;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.answer-option.correct {
+    background: #5FD3A8;
+}
+
+.quiz-footer {
+    margin: 20px 0 0;
+    color: #6B7794;
+    font-weight: 800;
+    text-align: center;
+}
+
+.streak-badge, .xp-badge {
+    position: absolute;
+    z-index: 2;
+    padding: 10px 14px;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 12px;
+    box-shadow: 3px 3px 0 #1E2A4A;
+    font-weight: 800;
+}
+
+.streak-badge {
+    top: 0;
+    left: -5px;
+    background: #FFD43B;
+    transform: rotate(-5deg);
+}
+
+.xp-badge {
+    right: -5px;
+    bottom: 0;
+    background: #9FD3F5;
+    transform: rotate(4deg);
+}
+
+/* Subjects Section */
+
+.subjects {
+    padding: 75px 24px 90px;
+    background: #FFFFFF;
+    border-top: 3px solid #1E2A4A;
+}
+
+.section-heading {
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading .badge {
+    margin-bottom: 12px;
+    background: #FFD43B;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.section-heading > p:last-child {
+    color: #6B7794;
+}
+
+.subject-grid {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.subject-card {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 31%;
+    min-height: 310px;
+    margin: 0 1% 24px;
+    padding: 24px 24px 75px;
+    background: #FFFFFF;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 #1E2A4A;
+    text-align: left;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.subject-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #1E2A4A;
+}
+
+.subject-icon {
+    width: 56px;
+    height: 56px;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 12px;
+    font-size: 29px;
+    text-align: center;
+    line-height: 56px;
+}
+
+.math .subject-icon, .computers .subject-icon {
+    background: #FFD43B;
+}
+
+.science .subject-icon, .english .subject-icon {
+    background: #5FD3A8;
+}
+
+.history .subject-icon {
+    background: #FF7A59;
+}
+
+.geography .subject-icon {
+    background: #9FD3F5;
+}
+
+.subject-card h3 {
+    margin: 20px 0 5px;
+    font-size: 24px;
+}
+
+.subject-card p {
+    margin: 0 0 22px;
+    color: #6B7794;
+}
+
+.subject-card > a {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+    display: block;
+    padding: 10px;
+    background: #2F6FDE;
+    border: 2px solid #1E2A4A;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* About Section */
+
+.about {
+    padding: 65px 5%;
+    background: #FFD43B;
+    border-top: 3px solid #1E2A4A;
+    border-bottom: 3px solid #1E2A4A;
+    overflow: hidden;
+}
+
+.about-content {
+    float: left;
+    width: 48%;
+}
+
+.about-content h2 {
+    margin: 0 0 18px;
+    font-size: 38px;
+}
+
+.about-content > p:last-child {
+    margin-bottom: 0;
+}
+
+.about-content .badge {
+    background: #FFFFFF;
+}
+
+.about-stats {
+    float: right;
+    width: 48%;
+    text-align: center;
+}
+
+.stat-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    min-height: 110px;
+    margin: 0 1% 10px;
+    padding: 20px 8px;
+    background: #FFFFFF;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 #1E2A4A;
+    text-align: center;
+}
+
+.stat-card strong {
+    display: block;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+}
+
+.stat-card span {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* Footer */
+
+.footer {
+    padding: 30px 5%;
+    background: #1E2A4A;
+    color: white;
+    overflow: hidden;
+}
+
+.footer-logo {
+    float: left;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-links {
+    float: right;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin-left: 18px;
+}
+
+.footer-links a:hover {
+    color: #FFD43B;
+}
+
+.footer p {
+    clear: both;
+    margin: 0;
+    padding-top: 20px;
+    color: #dce3f5;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 1023px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        width: 52%;
+    }
+
+    .quiz-area {
+        width: 44%;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .subject-card {
+        width: 47%;
+    }
+
+    .about-content {
+        width: 48%;
+    }
+
+    .about-stats {
+        width: 48%;
+    }
+
+    .stat-card {
+        width: 45%;
+    }
+}
+
+/* Phone */
+
+@media (max-width: 639px) {
+    .navbar {
+        padding: 14px 16px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 55px 22px 70px;
+    }
+
+    .hero-content {
+        float: none;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .quiz-area {
+        float: none;
+        width: 100%;
+        margin: 10px 5px 20px;
+    }
+
+    .quiz-card {
+        padding: 20px;
+    }
+
+    .quiz-card h2 {
+        font-size: 23px;
+    }
+
+    .subjects {
+        padding: 55px 22px 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .subject-card {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .about {
+        padding: 50px 22px;
+    }
+
+    .about-content {
+        float: none;
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .about-stats {
+        float: none;
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .stat-card {
+        width: 30%;
+        min-height: 95px;
+        margin: 0 1% 8px;
+    }
+
+    .stat-card strong {
+        font-size: 23px;
+    }
+
+    .stat-card span {
+        font-size: 11px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-logo {
+        float: none;
+    }
+
+    .footer-links {
+        float: none;
+        margin: 15px 0;
+    }
+
+    .footer-links a {
+        margin: 0 8px;
+    }
+}

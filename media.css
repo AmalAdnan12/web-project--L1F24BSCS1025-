@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #FFFBEF;
+    color: #1E2A4A;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Fredoka', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navigation */
+
+.navbar {
+    padding: 18px 4%;
+    background: #FFFBEF;
+    border-bottom: 3px solid #1E2A4A;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    margin-top: 5px;
+    font-size: 23px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-links {
+    float: left;
+    margin: 9px 0 0 25px;
+}
+
+.nav-links a {
+    display: inline-block;
+    margin-right: 14px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.nav-links a:hover {
+    color: #2F6FDE;
+}
+
+.nav-button, .main-button {
+    display: inline-block;
+    padding: 11px 17px;
+    background: #2F6FDE;
+    color: white;
+    border: 2px solid #1E2A4A;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #1E2A4A;
+    font-weight: 800;
+}
+
+.nav-button {
+    float: right;
+    white-space: nowrap;
+}
+
+/* Introduction */
+
+.intro {
+    padding: 70px 20px;
+    text-align: center;
+    background: #5FD3A8;
+    border-bottom: 3px solid #1E2A4A;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 14px;
+    background: #FFD43B;
+    border: 2px solid #1E2A4A;
+    border-radius: 30px;
+    font-weight: 800;
+}
+
+.intro h1 {
+    margin: 15px 0;
+    font-size: 48px;
+}
+
+.intro h1 span {
+    color: #2F6FDE;
+}
+
+.intro > p:not(.badge) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    font-size: 17px;
+}
+
+/* Section Headings */
+
+.section-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+.section-heading > p:last-child {
+    color: #6B7794;
+}
+
+/* How It Works */
+
+.how-it-works, .gallery {
+    padding: 60px 5%;
+}
+
+.steps {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.step-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    margin: 0 1% 15px;
+    padding: 25px;
+    background: white;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 #1E2A4A;
+    text-align: left;
+}
+
+.step-icon {
+    font-size: 42px;
+}
+
+.step-card h3 {
+    font-size: 22px;
+}
+
+.step-card p {
+    color: #6B7794;
+}
+
+/* Gallery */
+
+.gallery {
+    background: white;
+    border-top: 3px solid #1E2A4A;
+    border-bottom: 3px solid #1E2A4A;
+}
+
+.gallery-grid {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 22%;
+    margin: 0 1% 20px;
+    padding: 24px 18px;
+    border: 2.5px solid #1E2A4A;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 #1E2A4A;
+    text-align: left;
+}
+
+.math {
+    background: #FFF1B8;
+}
+
+.science {
+    background: #D9F8EB;
+}
+
+.technology {
+    background: #DCEAFF;
+}
+
+.world {
+    background: #FFE1D8;
+}
+
+.gallery-icon {
+    font-size: 42px;
+}
+
+.gallery-card h3 {
+    font-size: 22px;
+}
+
+.gallery-card p {
+    color: #6B7794;
+}
+
+/* Quiz Information */
+
+.quiz-info {
+    padding: 65px 7%;
+    overflow: hidden;
+}
+
+.info-content {
+    float: left;
+    width: 48%;
+}
+
+.info-picture {
+    float: right;
+    width: 48%;
+    padding: 35px;
+    background: #FFD43B;
+    border: 3px solid #1E2A4A;
+    border-radius: 18px;
+    box-shadow: 6px 6px 0 #1E2A4A;
+    text-align: center;
+}
+
+.info-content h2 {
+    font-size: 36px;
+}
+
+.info-content p:not(.badge) {
+    color: #6B7794;
+}
+
+.info-picture span {
+    font-size: 75px;
+}
+
+/* Footer */
+
+.footer {
+    padding: 30px 20px;
+    background: #1E2A4A;
+    color: white;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 28px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .step-card {
+        width: 30%;
+    }
+
+    .gallery-card {
+        width: 46%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .intro {
+        padding: 50px 20px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .steps {
+        text-align: center;
+    }
+
+    .step-card {
+        width: 100%;
+        margin: 0 0 25px;
+        text-align: left;
+    }
+
+    .section-heading h2, .info-content h2 {
+        font-size: 30px;
+    }
+
+    .gallery-card {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .how-it-works, .gallery {
+        padding: 45px 22px;
+    }
+
+    .quiz-info {
+        padding: 45px 22px;
+    }
+
+    .info-content {
+        float: none;
+        width: 100%;
+    }
+
+    .info-picture {
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+}
